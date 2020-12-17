@@ -1,9 +1,9 @@
-$page-max-width: 990px;
-$page-min-width: 480px;
+$lg-breakpoint: 990px;
+$md-breakpoint: 480px;
 
 
 @mixin container{
-  max-width: $page-max-width;
+  max-width: $lg-breakpoint;
   margin: 0 auto;
 
   &:after{
@@ -12,16 +12,16 @@ $page-min-width: 480px;
     clear: both;
   }
 
-  // .[class*="col-"]{
-  //   float: left;
-  // }
+  [class*="col-"]{
+    float: left;
+  }
 }
 
 .container{
   @include container;
 }
 
-@media screen and (min-width: $page-max-width){
+@media screen and (min-width: $lg-breakpoint){
   @for $i from 1 to 12 {
     .col-lg-#{$i} {
       width: 100% / 12 * $i;
@@ -29,7 +29,7 @@ $page-min-width: 480px;
   }
 }
 
-@media screen and (min-width: $page-min-width) and (max-width: $page-max-width){
+@media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint){
   @for $i from 1 to 12 {
     .col-md-#{$i} {
       width: 100% / 12 * $i;
@@ -37,7 +37,7 @@ $page-min-width: 480px;
   }
 }
 
-@media screen and (max-width: $page-min-width){
+@media screen and (max-width: $md-breakpoint){
   @for $i from 1 to 12 {
     .col-sm-#{$i} {
       width: 100% / 12 * $i;
@@ -45,7 +45,7 @@ $page-min-width: 480px;
   }
 }
 
-@media screen and (min-width: $page-max-width){
+@media screen and (min-width: $lg-breakpoint){
   @for $i from 1 to 12 {
     .col-lg-offset-#{$i} {
       margin-left: 100% / 12 * $i;
@@ -53,7 +53,7 @@ $page-min-width: 480px;
   }
 }
 
-@media screen and (min-width: $page-min-width) and (max-width: $page-max-width){
+@media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint){
   @for $i from 1 to 12 {
     .col-md-offset-#{$i} {
       margin-left: 100% / 12 * $i;
@@ -61,7 +61,7 @@ $page-min-width: 480px;
   }
 }
 
-@media screen and (max-width: $page-min-width){
+@media screen and (max-width: $md-breakpoint){
   @for $i from 1 to 12 {
     .col-sm-offset-#{$i} {
       margin-left: 100% / 12 * $i;

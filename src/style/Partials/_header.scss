@@ -1,0 +1,23 @@
+.top-header{
+
+  [class*="col-"]{
+    height: 50px;
+  }
+
+  & > div:first-child{
+    @include flex-center-start
+  }
+
+  & > div:last-child{
+    @include flex-center-end
+  }
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}

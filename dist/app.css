@@ -1,4 +1,6 @@
-.container {
+@import url(https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;
+
+400;500;600;700&display=swap);.container {
   max-width: 990px;
   margin: 0 auto;
 }
@@ -7,6 +9,10 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.container [class*=col-] {
+  float: left;
 }
 
 @media screen and (min-width: 990px) {
@@ -283,5 +289,72 @@
   .col-sm-offset-11 {
     margin-left: 91.6666666667%;
   }
+}
+
+.row {
+  width: 100%;
+  min-height: 50px;
+}
+
+body {
+  font-family: "Hind Vadodara", sans-serif;
+}
+
+body p {
+  font-weight: 300;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 600;
+}
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0 1rem 0 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  border: 2px solid #2c4692;
+  color: #2c4692;
+  background-color: white;
+}
+
+.primary-button img {
+  height: 40%;
+}
+
+.top-header {
+  height: 80px;
+}
+
+.top-header > div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-header > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
