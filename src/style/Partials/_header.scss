@@ -1,7 +1,9 @@
 .top-header{
+  height: 60px;
+  border-bottom: 1px solid $text-color;
 
   [class*="col-"]{
-    height: 50px;
+    height: inherit;
   }
 
   & > div:first-child{
@@ -13,6 +15,10 @@
   }
 }
 
+ul{
+  margin-right: 1rem;
+}
+
 li {
   display: inline-block;
   list-style: none;
@@ -20,4 +26,36 @@ li {
 
 a{
   text-decoration: none;
+  color: $text-color
+}
+
+.banner{
+  height: 300px;
+  color: $text-color;
+  margin: 2rem 0;
+  .buttons{
+    @include flex-center-start;
+    > * {
+      margin-right: 0.5rem;
+    }
+  }
+
+  & > [class*="col-"]:first-child {
+    @include flex-col-start-start;
+    height: inherit;
+    > * {
+      margin: 0.5rem 0;
+    }
+    & > p:first-of-type{
+      font-size: 1.5rem;
+    }
+  }
+
+  & > [class*="col-"]:last-child {
+    img {
+      width: 100%;
+    }
+
+
+  }
 }

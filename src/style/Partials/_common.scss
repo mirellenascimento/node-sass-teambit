@@ -23,6 +23,20 @@
   align-items: center;
 }
 
+@mixin flex-col-center-start{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-col-start-start{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 @mixin flex-center-end{
   display: flex;
   justify-content: flex-end;
@@ -45,6 +59,7 @@ body{
   h1, h2, h3, h4, h5, h6{
     font-weight: 600;
   }
+  margin: 0;
 }
 
 //elements
@@ -53,20 +68,26 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 0 0.5rem 0 0.5rem;
-  margin: 0 1rem 0 1rem;
+  padding:0.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 500;
+  img {
+    height: 30px;
+  }
 }
 
 .primary-button{
   @include button;
-  height: 50px;
   border: 2px solid $secondary-color;
   color: $secondary-color;
   background-color: $bg-color;
-  img {
-    height: 40%;
-  }
+}
+
+.secondary-button{
+  @include button;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  color: $bg-color;
+  background-color: $secondary-color;
 }
