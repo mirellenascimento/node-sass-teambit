@@ -1,0 +1,70 @@
+$page-max-width: 990px;
+$page-min-width: 480px;
+
+
+@mixin container{
+  max-width: $page-max-width;
+  margin: 0 auto;
+
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  // .[class*="col-"]{
+  //   float: left;
+  // }
+}
+
+.container{
+  @include container;
+}
+
+@media screen and (min-width: $page-max-width){
+  @for $i from 1 to 12 {
+    .col-lg-#{$i} {
+      width: 100% / 12 * $i;
+    }
+  }
+}
+
+@media screen and (min-width: $page-min-width) and (max-width: $page-max-width){
+  @for $i from 1 to 12 {
+    .col-md-#{$i} {
+      width: 100% / 12 * $i;
+    }
+  }
+}
+
+@media screen and (max-width: $page-min-width){
+  @for $i from 1 to 12 {
+    .col-sm-#{$i} {
+      width: 100% / 12 * $i;
+    }
+  }
+}
+
+@media screen and (min-width: $page-max-width){
+  @for $i from 1 to 12 {
+    .col-lg-offset-#{$i} {
+      margin-left: 100% / 12 * $i;
+    }
+  }
+}
+
+@media screen and (min-width: $page-min-width) and (max-width: $page-max-width){
+  @for $i from 1 to 12 {
+    .col-md-offset-#{$i} {
+      margin-left: 100% / 12 * $i;
+    }
+  }
+}
+
+@media screen and (max-width: $page-min-width){
+  @for $i from 1 to 12 {
+    .col-sm-offset-#{$i} {
+      margin-left: 100% / 12 * $i;
+    }
+  }
+}
