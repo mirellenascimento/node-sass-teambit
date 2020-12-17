@@ -1,25 +1,9 @@
-.top-header{
-  height: 60px;
-  border-bottom: 1px solid $text-color;
-
-  [class*="col-"]{
-    height: inherit;
-  }
-
-  & > div:first-child{
-    @include flex-center-start
-  }
-
-  & > div:last-child{
-    @include flex-center-end
-  }
-}
-
+//General
 ul{
   margin-right: 1rem;
 }
 
-li {
+li{
   display: inline-block;
   list-style: none;
 }
@@ -29,10 +13,32 @@ a{
   color: $text-color
 }
 
+//Top-header
+.top-header{
+  height: 60px;
+  border-bottom: 1px solid $text-color;
+
+  [class*="col-"]{
+    height: inherit;
+  }
+
+  //logo
+  & > div:first-child{
+    @include flex-center-start
+  }
+
+  //menu and button
+  & > div:last-child{
+    @include flex-center-end
+  }
+}
+
+//Banner
 .banner{
-  height: 300px;
-  color: $text-color;
+  @include flex-center-center;
+  height: 400px;
   margin: 2rem 0;
+
   .buttons{
     @include flex-center-start;
     > * {
@@ -40,22 +46,25 @@ a{
     }
   }
 
+  //left side
   & > [class*="col-"]:first-child {
     @include flex-col-start-start;
     height: inherit;
+    padding-top: 2rem;
+
     > * {
       margin: 0.5rem 0;
     }
+
     & > p:first-of-type{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
+  //right side
   & > [class*="col-"]:last-child {
     img {
       width: 100%;
     }
-
-
   }
 }

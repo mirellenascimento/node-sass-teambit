@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-$lg-breakpoint: 990px;
-$md-breakpoint: 480px;
-
-
 @mixin container{
   max-width: $lg-breakpoint;
   margin: 0 auto;

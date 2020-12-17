@@ -1,4 +1,9 @@
-body{
-  background-color: $bg-color;
-  color: $text-color;
-}
+//framework width
+$lg-breakpoint: 990px;
+$md-breakpoint: 480px;
+
+//Colors
+$text-color: #573f2c; //brown
+$primary-color: #fee7d2; //cream
+$secondary-color: #2c4692; //blue
+$bg-color: white;

@@ -1,4 +1,20 @@
-//General sizing
+//General settings
+body{
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Hind Vadodara', sans-serif;
+  p{
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+  }
+  h1, h2, h3, h4, h5, h6{
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  margin: 0;
+}
+
 .row{
   width: 100%;
   min-height: 50px;
@@ -30,6 +46,13 @@
   align-items: flex-start;
 }
 
+@mixin flex-col-end-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flex-col-start-start{
   display: flex;
   flex-direction: column;
@@ -43,24 +66,6 @@
   align-items: center;
 }
 
-//Colors
-$text-color: #573f2c; //brown
-$primary-color: #fee7d2; //cream
-$secondary-color: #2c4692; //blue
-$bg-color: white;
-
-
-//fonts
-body{
-  font-family: 'Hind Vadodara', sans-serif;
-  p{
-    font-weight: 300;
-  }
-  h1, h2, h3, h4, h5, h6{
-    font-weight: 600;
-  }
-  margin: 0;
-}
 
 //elements
 @mixin button{
@@ -68,7 +73,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding:0.5rem;
+  padding:0.2rem 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 500;
@@ -79,7 +84,7 @@ body{
 
 .primary-button{
   @include button;
-  border: 2px solid $secondary-color;
+  border: 1px solid $secondary-color;
   color: $secondary-color;
   background-color: $bg-color;
 }
