@@ -313,7 +313,7 @@
 
 body {
   background-color: white;
-  color: #573f2c;
+  color: #0414B3;
   font-family: "Hind Vadodara", sans-serif;
 }
 
@@ -341,7 +341,8 @@ body a {
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.3rem;
-  color: #2c4692;
+  text-decoration: none;
+  color: #0414B3;
 }
 
 .row {
@@ -358,8 +359,8 @@ body a {
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 500;
-  border: 1px solid #2c4692;
-  color: #2c4692;
+  border: 1px solid #0414B3;
+  color: #0414B3;
   background-color: white;
 }
 
@@ -379,49 +380,48 @@ body a {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   color: white;
-  background-color: #2c4692;
+  background-color: #0414B3;
 }
 
 .secondary-button img {
   height: 30px;
 }
 
-ul {
+header ul {
   margin-right: 1rem;
 }
 
-li {
+header li {
   display: inline-block;
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: #573f2c;
-}
-
-.top-header {
+header .top-header {
   height: 60px;
-  border-bottom: 1px solid #573f2c;
+  border-bottom: 1px solid #0414B3;
 }
 
-.top-header [class*=col-] {
+header .top-header [class*=col-] {
   height: inherit;
 }
 
-.top-header > div:first-child {
+header .top-header > div:first-child {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.top-header > div:last-child {
+header .top-header > div:first-child img {
+  height: 40px;
+}
+
+header .top-header > div:last-child {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.banner {
+header .banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,17 +429,17 @@ a {
   margin: 2rem 0;
 }
 
-.banner .buttons {
+header .banner .buttons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.banner .buttons > * {
+header .banner .buttons > * {
   margin-right: 0.5rem;
 }
 
-.banner > [class*=col-]:first-child {
+header .banner > [class*=col-]:first-child {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -448,16 +448,17 @@ a {
   padding-top: 2rem;
 }
 
-.banner > [class*=col-]:first-child > * {
+header .banner > [class*=col-]:first-child > * {
   margin: 0.5rem 0;
 }
 
-.banner > [class*=col-]:last-child img {
+header .banner > [class*=col-]:last-child img {
   width: 100%;
 }
 
 #sec-01 {
-  background-color: #fee7d2;
+  background-color: #7f14d4;
+  color: white;
 }
 
 #sec-01 * {
@@ -487,7 +488,7 @@ a {
   width: 100%;
   height: 1px;
   padding: 0;
-  background-color: #573f2c;
+  background-color: #0414B3;
 }
 
 #sec-01 [class*=col-] {
@@ -517,6 +518,10 @@ a {
   width: 100%;
 }
 
+#sec-02 img.smaller {
+  max-height: 300px;
+}
+
 #sec-02 h3 {
   padding: 1rem;
   padding-bottom: 2rem;
@@ -525,5 +530,90 @@ a {
 #sec-02 p,
 #sec-02 a {
   padding: 1rem;
+}
+
+#sec-03 {
+  background-color: #7f14d4;
+  color: white;
+  padding: 3rem 0;
+}
+
+#sec-03 .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#sec-03 .row > h5,
+#sec-03 .row > div {
+  margin: 2rem 0;
+}
+
+#sec-03 .card {
+  width: 60%;
+  padding: 2rem;
+  border: 1px solid #0414B3;
+  background-color: white;
+  color: #0414B3;
+  border-radius: 15px;
+}
+
+#sec-03 .card .large {
+  color: #de14ee;
+}
+
+#sec-03 .card img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #0414B3;
+}
+
+#sec-03 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec-03 .buttons > * {
+  padding: 0 1rem;
+}
+
+footer {
+  min-height: 300px;
+  padding: 3rem 0;
+}
+
+footer h4 {
+  padding-bottom: 2rem;
+}
+
+footer img {
+  height: 60px;
+  margin-right: 1rem;
+}
+
+footer ul li {
+  font-size: 0.8rem;
+  list-style: none;
+  line-height: 1.2rem;
+  padding: 0.5rem;
+}
+
+footer .row > [class*=col-]:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer .row > [class*=col-]:first-child h4 {
+  line-height: 1.2rem;
+  padding-bottom: 0;
+}
+
+footer .row > [class*=col-]:first-child a {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 

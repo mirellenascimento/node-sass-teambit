@@ -1,0 +1,42 @@
+@use 'variables';
+
+footer{
+  //General
+  min-height: 300px;
+  padding: 3rem 0;
+  h4{
+    padding-bottom: 2rem;
+  }
+
+  img{
+    height: 60px;
+    margin-right: 1rem;
+  }
+
+  //Menus
+  ul{
+    li{
+      font-size: 0.8rem;
+      list-style: none;
+      line-height: 1.2rem;
+      padding: 0.5rem;
+    }
+  }
+
+  //left text and logo
+
+  .row > [class*='col-']:first-child{
+    @include variables.flex-center-start;
+
+    h4{
+      line-height: 1.2rem;
+      padding-bottom: 0;
+
+    }
+
+    a{
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}

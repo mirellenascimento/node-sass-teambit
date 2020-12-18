@@ -6,9 +6,10 @@ $lg-breakpoint: 990px;
 $md-breakpoint: 480px;
 
 //Colors
-$text-color: #573f2c; //brown
-$primary-color: #fee7d2; //cream
-$secondary-color: #2c4692; //blue
+$text-color: #0414B3; //dark blue
+$text-color-light: white;
+$primary-color: #7f14d4; // electric violet
+$secondary-color: #de14ee; //blue
 $bg-color: white;
 
 
@@ -42,6 +43,13 @@ $bg-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-col-start-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 

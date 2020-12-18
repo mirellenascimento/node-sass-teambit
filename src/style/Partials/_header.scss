@@ -1,68 +1,72 @@
 @use 'variables';
 
-//General
-ul{
-  margin-right: 1rem;
-}
+header{
 
-li{
-  display: inline-block;
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-  color: variables.$text-color
-}
-
-//Top-header
-.top-header{
-  height: 60px;
-  border-bottom: 1px solid variables.$text-color;
-
-  [class*="col-"]{
-    height: inherit;
+  //General
+  ul{
+    margin-right: 1rem;
   }
 
-  //logo
-  & > div:first-child{
-    @include variables.flex-center-start
+  li{
+    display: inline-block;
+    list-style: none;
   }
+  
+  //Top-header
+  .top-header{
+    height: 60px;
+    border-bottom: 1px solid variables.$text-color;
 
-  //menu and button
-  & > div:last-child{
-    @include variables.flex-center-end
-  }
-}
+    [class*="col-"]{
+      height: inherit;
+    }
 
-//Banner
-.banner{
-  @include variables.flex-center-center;
-  height: 400px;
-  margin: 2rem 0;
+    //logo
+    & > div:first-child{
+      @include variables.flex-center-start;
+      img{
+        height: 40px;
+      }
+    }
 
-  .buttons{
-    @include variables.flex-center-start;
-    > * {
-      margin-right: 0.5rem;
+    //menu and button
+    & > div:last-child{
+      @include variables.flex-center-end
     }
   }
 
-  //left side
-  & > [class*="col-"]:first-child {
-    @include variables.flex-col-start-start;
-    height: inherit;
-    padding-top: 2rem;
+  //Banner
+  .banner{
+    @include variables.flex-center-center;
+    height: 400px;
+    margin: 2rem 0;
 
-    > * {
-      margin: 0.5rem 0;
+    .buttons{
+      @include variables.flex-center-start;
+      > * {
+        margin-right: 0.5rem;
+      }
+    }
+
+    //left side
+    & > [class*="col-"]:first-child {
+      @include variables.flex-col-start-start;
+      height: inherit;
+      padding-top: 2rem;
+
+      > * {
+        margin: 0.5rem 0;
+      }
+    }
+
+    //right side
+    & > [class*="col-"]:last-child {
+      img {
+        width: 100%;
+      }
     }
   }
 
-  //right side
-  & > [class*="col-"]:last-child {
-    img {
-      width: 100%;
-    }
-  }
+
+
 }

@@ -11,6 +11,10 @@
   img{
     width: 100%;
   }
+
+  img.smaller{
+    max-height: 300px;
+  }
   h3{
     padding: 1rem;
     padding-bottom: 2rem;
