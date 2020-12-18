@@ -1,18 +1,31 @@
+@use 'variables';
+
 //General settings
 body{
-  background-color: $bg-color;
-  color: $text-color;
+  background-color: variables.$bg-color;
+  color: variables.$text-color;
   font-family: 'Hind Vadodara', sans-serif;
+
   p{
     font-size: 0.8rem;
     font-weight: 300;
     line-height: 1.3rem;
+    & .large{
+      font-size: 1.2rem;
+    }
   }
+
   h1, h2, h3, h4, h5, h6{
     line-height: 2rem;
     font-weight: 600;
   }
-  margin: 0;
+
+  a{
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    color: variables.$secondary-color;
+  }
 }
 
 .row{
@@ -20,79 +33,18 @@ body{
   min-height: 50px;
 }
 
-//Positioning
-@mixin flex-center-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-center-between{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-center-start{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@mixin flex-col-center-start{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-@mixin flex-col-end-center{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-@mixin flex-col-start-start{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-@mixin flex-center-end{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-
-//elements
-@mixin button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding:0.2rem 0.5rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-  img {
-    height: 30px;
-  }
-}
-
+//Buttons
 .primary-button{
-  @include button;
-  border: 1px solid $secondary-color;
-  color: $secondary-color;
-  background-color: $bg-color;
+  @include variables.button;
+  border: 1px solid variables.$secondary-color;
+  color: variables.$secondary-color;
+  background-color: variables.$bg-color;
 }
 
 .secondary-button{
-  @include button;
+  @include variables.button;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  color: $bg-color;
-  background-color: $secondary-color;
+  color: variables.$bg-color;
+  background-color: variables.$secondary-color;
 }

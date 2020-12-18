@@ -1,5 +1,9 @@
+@use 'variables';
+
 #sec-01{
-  background-color: $primary-color;
+
+  //General
+  background-color: variables.$primary-color;
 
   * {
     padding: 1rem 0;
@@ -9,10 +13,9 @@
     text-align: center;
   }
 
-
-
+  //Positioning and unique image in a row
   .row:first-child, .row:last-child, .row:nth-child(3){
-    @include flex-center-center;
+    @include variables.flex-center-center;
     img{
       height: 400px;
     }
@@ -22,11 +25,12 @@
     width: 100%;
     height: 1px;
     padding: 0;
-    background-color: $text-color;
+    background-color: variables.$text-color;
   }
 
+  // More images in a row
   [class*="col-"]{
-    @include flex-col-end-center;
+    @include variables.flex-col-end-center;
     img {
       height: 150px;
     }

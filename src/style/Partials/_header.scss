@@ -1,3 +1,5 @@
+@use 'variables';
+
 //General
 ul{
   margin-right: 1rem;
@@ -10,13 +12,13 @@ li{
 
 a{
   text-decoration: none;
-  color: $text-color
+  color: variables.$text-color
 }
 
 //Top-header
 .top-header{
   height: 60px;
-  border-bottom: 1px solid $text-color;
+  border-bottom: 1px solid variables.$text-color;
 
   [class*="col-"]{
     height: inherit;
@@ -24,23 +26,23 @@ a{
 
   //logo
   & > div:first-child{
-    @include flex-center-start
+    @include variables.flex-center-start
   }
 
   //menu and button
   & > div:last-child{
-    @include flex-center-end
+    @include variables.flex-center-end
   }
 }
 
 //Banner
 .banner{
-  @include flex-center-center;
+  @include variables.flex-center-center;
   height: 400px;
   margin: 2rem 0;
 
   .buttons{
-    @include flex-center-start;
+    @include variables.flex-center-start;
     > * {
       margin-right: 0.5rem;
     }
@@ -48,16 +50,12 @@ a{
 
   //left side
   & > [class*="col-"]:first-child {
-    @include flex-col-start-start;
+    @include variables.flex-col-start-start;
     height: inherit;
     padding-top: 2rem;
 
     > * {
       margin: 0.5rem 0;
-    }
-
-    & > p:first-of-type{
-      font-size: 1.2rem;
     }
   }
 

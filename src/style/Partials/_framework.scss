@@ -1,3 +1,5 @@
+@use 'variables';
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +7,6 @@
 }
 
 @mixin container{
-  max-width: $lg-breakpoint;
-  margin: 0 auto;
 
   &:after{
     content: "";
@@ -21,9 +21,16 @@
 
 .container{
   @include container;
+  max-width: variables.$lg-breakpoint;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: $lg-breakpoint){
+.container-full{
+  @include container;
+  width: 100%;
+}
+
+@media screen and (min-width: variables.$lg-breakpoint){
   @for $i from 1 to 12 {
     .col-lg-#{$i} {
       width: 100% / 12 * $i;
@@ -31,7 +38,7 @@
   }
 }
 
-@media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint){
+@media screen and (min-width: variables.$md-breakpoint) and (max-width: variables.$lg-breakpoint){
   @for $i from 1 to 12 {
     .col-md-#{$i} {
       width: 100% / 12 * $i;
@@ -39,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: $md-breakpoint){
+@media screen and (max-width: variables.$md-breakpoint){
   @for $i from 1 to 12 {
     .col-sm-#{$i} {
       width: 100% / 12 * $i;
@@ -47,26 +54,26 @@
   }
 }
 
-@media screen and (min-width: $lg-breakpoint){
+@media screen and (min-width: variables.$lg-breakpoint){
   @for $i from 1 to 12 {
     .col-lg-offset-#{$i} {
-      margin-left: 100% / 12 * $i;
+      width: 100% / 12 * $i;
     }
   }
 }
 
-@media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint){
+@media screen and (min-width: variables.$md-breakpoint) and (max-width: variables.$lg-breakpoint){
   @for $i from 1 to 12 {
     .col-md-offset-#{$i} {
-      margin-left: 100% / 12 * $i;
+      width: 100% / 12 * $i;
     }
   }
 }
 
-@media screen and (max-width: $md-breakpoint){
+@media screen and (max-width: variables.$md-breakpoint){
   @for $i from 1 to 12 {
     .col-sm-offset-#{$i} {
-      margin-left: 100% / 12 * $i;
+      width: 100% / 12 * $i;
     }
   }
 }

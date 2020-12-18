@@ -21,6 +21,20 @@
   float: left;
 }
 
+.container-full {
+  width: 100%;
+}
+
+.container-full:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container-full [class*=col-] {
+  float: left;
+}
+
 @media screen and (min-width: 990px) {
   .col-lg-1 {
     width: 8.3333333333%;
@@ -161,139 +175,139 @@
 
 @media screen and (min-width: 990px) {
   .col-lg-offset-1 {
-    margin-left: 8.3333333333%;
+    width: 8.3333333333%;
   }
 
   .col-lg-offset-2 {
-    margin-left: 16.6666666667%;
+    width: 16.6666666667%;
   }
 
   .col-lg-offset-3 {
-    margin-left: 25%;
+    width: 25%;
   }
 
   .col-lg-offset-4 {
-    margin-left: 33.3333333333%;
+    width: 33.3333333333%;
   }
 
   .col-lg-offset-5 {
-    margin-left: 41.6666666667%;
+    width: 41.6666666667%;
   }
 
   .col-lg-offset-6 {
-    margin-left: 50%;
+    width: 50%;
   }
 
   .col-lg-offset-7 {
-    margin-left: 58.3333333333%;
+    width: 58.3333333333%;
   }
 
   .col-lg-offset-8 {
-    margin-left: 66.6666666667%;
+    width: 66.6666666667%;
   }
 
   .col-lg-offset-9 {
-    margin-left: 75%;
+    width: 75%;
   }
 
   .col-lg-offset-10 {
-    margin-left: 83.3333333333%;
+    width: 83.3333333333%;
   }
 
   .col-lg-offset-11 {
-    margin-left: 91.6666666667%;
+    width: 91.6666666667%;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 990px) {
   .col-md-offset-1 {
-    margin-left: 8.3333333333%;
+    width: 8.3333333333%;
   }
 
   .col-md-offset-2 {
-    margin-left: 16.6666666667%;
+    width: 16.6666666667%;
   }
 
   .col-md-offset-3 {
-    margin-left: 25%;
+    width: 25%;
   }
 
   .col-md-offset-4 {
-    margin-left: 33.3333333333%;
+    width: 33.3333333333%;
   }
 
   .col-md-offset-5 {
-    margin-left: 41.6666666667%;
+    width: 41.6666666667%;
   }
 
   .col-md-offset-6 {
-    margin-left: 50%;
+    width: 50%;
   }
 
   .col-md-offset-7 {
-    margin-left: 58.3333333333%;
+    width: 58.3333333333%;
   }
 
   .col-md-offset-8 {
-    margin-left: 66.6666666667%;
+    width: 66.6666666667%;
   }
 
   .col-md-offset-9 {
-    margin-left: 75%;
+    width: 75%;
   }
 
   .col-md-offset-10 {
-    margin-left: 83.3333333333%;
+    width: 83.3333333333%;
   }
 
   .col-md-offset-11 {
-    margin-left: 91.6666666667%;
+    width: 91.6666666667%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .col-sm-offset-1 {
-    margin-left: 8.3333333333%;
+    width: 8.3333333333%;
   }
 
   .col-sm-offset-2 {
-    margin-left: 16.6666666667%;
+    width: 16.6666666667%;
   }
 
   .col-sm-offset-3 {
-    margin-left: 25%;
+    width: 25%;
   }
 
   .col-sm-offset-4 {
-    margin-left: 33.3333333333%;
+    width: 33.3333333333%;
   }
 
   .col-sm-offset-5 {
-    margin-left: 41.6666666667%;
+    width: 41.6666666667%;
   }
 
   .col-sm-offset-6 {
-    margin-left: 50%;
+    width: 50%;
   }
 
   .col-sm-offset-7 {
-    margin-left: 58.3333333333%;
+    width: 58.3333333333%;
   }
 
   .col-sm-offset-8 {
-    margin-left: 66.6666666667%;
+    width: 66.6666666667%;
   }
 
   .col-sm-offset-9 {
-    margin-left: 75%;
+    width: 75%;
   }
 
   .col-sm-offset-10 {
-    margin-left: 83.3333333333%;
+    width: 83.3333333333%;
   }
 
   .col-sm-offset-11 {
-    margin-left: 91.6666666667%;
+    width: 91.6666666667%;
   }
 }
 
@@ -301,13 +315,16 @@ body {
   background-color: white;
   color: #573f2c;
   font-family: "Hind Vadodara", sans-serif;
-  margin: 0;
 }
 
 body p {
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.3rem;
+}
+
+body p .large {
+  font-size: 1.2rem;
 }
 
 body h1,
@@ -318,6 +335,13 @@ body h5,
 body h6 {
   line-height: 2rem;
   font-weight: 600;
+}
+
+body a {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.3rem;
+  color: #2c4692;
 }
 
 .row {
@@ -428,10 +452,6 @@ a {
   margin: 0.5rem 0;
 }
 
-.banner > [class*=col-]:first-child > p:first-of-type {
-  font-size: 1.2rem;
-}
-
 .banner > [class*=col-]:last-child img {
   width: 100%;
 }
@@ -479,5 +499,31 @@ a {
 
 #sec-01 [class*=col-] img {
   height: 150px;
+}
+
+#sec-02 {
+  padding: 2rem 0;
+}
+
+#sec-02 .row {
+  min-height: 550px;
+}
+
+#sec-02 [class*=col-lg-offset-] {
+  min-height: 500px;
+}
+
+#sec-02 img {
+  width: 100%;
+}
+
+#sec-02 h3 {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+#sec-02 p,
+#sec-02 a {
+  padding: 1rem;
 }
 

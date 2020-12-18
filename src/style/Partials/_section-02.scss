@@ -1,0 +1,21 @@
+#sec-02{
+  padding: 2rem 0;
+  .row{
+    min-height: 550px;
+  }
+
+  [class*="col-lg-offset-"]{
+    min-height: 500px;
+  }
+
+  img{
+    width: 100%;
+  }
+  h3{
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+  p, a{
+    padding: 1rem;
+  }
+}
