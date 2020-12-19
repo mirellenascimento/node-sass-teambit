@@ -11,7 +11,11 @@ header{
     display: inline-block;
     list-style: none;
   }
-  
+
+  .secondary-button{
+    background-color: variables.$secondary-color;
+  }
+
   //Top-header
   .top-header{
     height: 60px;
@@ -30,15 +34,13 @@ header{
     }
 
     //menu and button
-    & > div:last-child{
+    .full-menu, .bars-menu{
       @include variables.flex-center-end
     }
   }
 
   //Banner
   .banner{
-    @include variables.flex-center-center;
-    height: 400px;
     margin: 2rem 0;
 
     .buttons{
@@ -66,7 +68,4 @@ header{
       }
     }
   }
-
-
-
 }
